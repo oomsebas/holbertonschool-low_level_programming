@@ -11,16 +11,23 @@ int main(void)
 
 int i = 48;
 int j = 48;
+int k=0;
 
-for (i; i <= 57 ; i++)
+while (i<= 57)
 {
-	do {
-		putchar(i);
-		putchar(j);
+	while (j <= 57)
+	{
+		if (k != 0)
+		{		 
 		putchar(44);
 		putchar(32);
+		}
+		putchar(i);
+		putchar(j);
 		j++;
-	} while (j < 58);
+		k++;
+	}
+i++;
 j = 48;
 }
 putchar('\n');
