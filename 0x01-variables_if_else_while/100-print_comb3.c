@@ -16,9 +16,13 @@ int main(void)
 		u = n % 10;
 		if (u != d && u > d)
 		{
-		putchar(d + 48);
-		putchar(u + 48);
-		putchar(32);
+			putchar(d + 48);
+			putchar(u + 48);
+			if (n != 89)
+			{
+			putchar(',');
+			putchar(32);
+			}
 		}
 		n++;
 
