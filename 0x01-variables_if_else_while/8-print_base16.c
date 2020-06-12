@@ -14,7 +14,7 @@ while (num <= 102)
 {
 putchar(num);
 num++;
-if (num == 57)
+if (num == 58)
 num = 97;
 }
 putchar('\n');
