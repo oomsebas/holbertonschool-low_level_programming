@@ -1,5 +1,7 @@
 #include "holberton.h"
 
+void print_table(int k, int i, int j);
+
 /**
  *times-table - Prints the nine times table, starting with zero.
  *
@@ -19,22 +21,8 @@ void times_table(void)
 
 			if (j != 9)
 			{
-					if (k <= 9)
-					{
-						_putchar(k + '0');
-						_putchar(',');
-						_putchar(' ');
-						if ((i * (j + 1)) <= 9)
-							_putchar(' ');
-					}
-					else
-					{
-						_putchar(k / 10 + '0');
-						_putchar(k % 10 + '0');
-						_putchar(',');
-						_putchar(' ');
-					}
 
+				print_table(k, i ,j);
 			}
 			else
 			{
@@ -54,3 +42,29 @@ void times_table(void)
 }
 
 
+/**
+ *print-table - Prints the special spaces 
+ *
+ *
+ *Return: None
+ *
+ */
+void print_table(int k, int i, int j)
+{
+	if (k <= 9)
+	{
+		_putchar(k + '0');
+		_putchar(',');
+		_putchar(' ');
+		if ((i * (j + 1)) <= 9)
+			_putchar(' ');
+	}
+	else
+	{
+		_putchar(k / 10 + '0');
+		_putchar(k % 10 + '0');
+		_putchar(',');
+		_putchar(' ');
+	}
+
+}
