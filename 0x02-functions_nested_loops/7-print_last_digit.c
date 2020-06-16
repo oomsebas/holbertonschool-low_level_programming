@@ -13,20 +13,18 @@ int print_last_digit(int c)
 	if (c > 0)
 	{
 		res = c % 10;
-		_putchar(res + '0');
-		return (res);
 	}
 	else if (c == 0)
 	{
 		res = 0;
-		_putchar('0');
-		return (res);
-	}
+
+        }
 	else
 	{
 		res = (-1) * c;
 		res = res % 10;
-		_putchar(res + '0');
-		return (res);
+
 	}
+	_putchar(res + '0');
+	return (res);
 }
