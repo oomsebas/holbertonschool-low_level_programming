@@ -8,8 +8,23 @@
  */
 int print_last_digit(int c)
 {
-	c = _abs(c);
-	c = c % 10;
-	_putchar(c + '0');
-	return (c);
+	int res;
+
+       	if (c > 0)
+	{
+		res = c % 10;
+		_putchar(res + '0');
+		return (res);
+	}
+	else if (c == 0)
+	{
+		return (0);
+	}
+	else
+	{
+		res = (-1) * c;
+		res = res % 10;
+		_putchar(res + '0');
+		return (res);
+	}
 }
