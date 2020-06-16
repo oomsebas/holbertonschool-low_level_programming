@@ -4,11 +4,11 @@
  * print_last_digit - prints the last digit of a number
  * @c: the number to extract the last digit
  *
- * Return: the last digit of c
+ * Return: res the last digit of c
  */
 int print_last_digit(int c)
 {
-	int res;
+	int res, abs;
 
 	if (c >= 0)
 	{
@@ -16,8 +16,8 @@ int print_last_digit(int c)
 	}
 	else
 	{
-		res = (-1) * c;
-		res = res % 10;
+		abs = c * (-1);
+		res = abs % 10;
 
 	}
 	_putchar(res + '0');
