@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- *print_alphabet_X10 - prints the alphabet to stdout ten times
+ *print_alphabet_x10 - prints the alphabet to stdout ten times
  *
  */
-void print_alphabet_X10(void)
+void print_alphabet_x10(void)
 {
 	int n = 97;
 	int m = 0;
