@@ -1,7 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 #include <stdio.h>
-
+#include<stdlib.h>
 /*
  * Structs, enums and unions definitions
  * Typedefs
@@ -10,4 +10,6 @@
 void print_remaining_days(int month, int day, int year);
 int largest_number(int a, int b, int c);
 void positive_or_negative(int n);
+int convert_day(int month, int day);
+
 #endif /* HOLBERTON_H */
