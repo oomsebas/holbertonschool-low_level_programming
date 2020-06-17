@@ -1,5 +1,3 @@
-#ifndef _HOLBERTON_H
-#define _HOLBERTON_H
 
 /*
  * Structs, enums and unions definitions
@@ -9,5 +7,3 @@
 
 void positive_or_negative(int n);
 int largest_number(int a, int b, int c);
-
-#endif /* _HOLBERTON_H*/
