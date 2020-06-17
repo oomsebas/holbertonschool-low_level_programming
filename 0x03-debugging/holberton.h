@@ -1,5 +1,7 @@
-#ifndef _HOLBERTON_H_
-#define _HOLBERTON_H_
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
+#include <stdio.h>
+
 /*
  * Structs, enums and unions definitions
  * Typedefs
@@ -7,4 +9,4 @@
  */
 int largest_number(int a, int b, int c);
 void positive_or_negative(int n);
-#endif /* _HOLBERTON_H_ */
+#endif /* HOLBERTON_H */
