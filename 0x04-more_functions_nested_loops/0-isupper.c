@@ -1,7 +1,6 @@
 #include "holberton.h"
 
 /**
- *
  *_isupper - checks for uppercase character
  *@c: the letter to check
  *
