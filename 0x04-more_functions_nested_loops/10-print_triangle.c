@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *print_square - prints a square, followed by a new line.
+ *print_triangle - prints a triangle, followed by a new line.
  *@size: the number of rows a columns of the triangle.
  *
  *Return: None
