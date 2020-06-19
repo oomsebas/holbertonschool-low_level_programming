@@ -8,10 +8,14 @@
  */
 void print_square(int size)
 {
-	int col = size, row = size;
+	int col = size;
+	int row = size;
 
 	if (size <= 0)
-		_putchar('#');
+	{
+		_putchar('\n');
+		return;
+	}
 	while (row--)
 	{
 		while (col--)
