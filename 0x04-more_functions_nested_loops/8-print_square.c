@@ -8,12 +8,10 @@
  */
 void print_square(int size)
 {
-	int j, n;
-	if (size <=0)
-		_putchar('#');
+	int col = size, row = size;
 
-	col = size;
-	row = size;
+	if (size <= 0)
+		_putchar('#');
 	while (row--)
 	{
 		while (col--)
