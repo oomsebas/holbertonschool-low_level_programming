@@ -2,6 +2,7 @@
 #define _HOLBERTON_H_
 
 #include <stdio.h>
+
 /*
  * Structs, enums and unions definitions
  * Typedefs
@@ -11,4 +12,9 @@
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
 int _strlen(char *s);
+void _puts(char *str);
+int _putchar(char c);
+
+
+
 #endif /* _HOLBERTON_H_ */
