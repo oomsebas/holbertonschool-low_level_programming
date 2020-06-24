@@ -11,10 +11,9 @@ void rev_string(char *s)
 {
 	int len;
 	int i;
+	char srev[9];
 
 	len = _strlen(s);
-	char srev[len];
-
 	for (i = 0; i <= len; i++)
 	{
 		*(srev + i) = *(s + (len - 1) - i);
