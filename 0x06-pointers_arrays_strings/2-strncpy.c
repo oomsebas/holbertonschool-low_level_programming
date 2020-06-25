@@ -11,12 +11,18 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	char *cp;
-	cp=dest;
+	cp = dest;
 
 	while (n--)
 	{
-		*(dest) = *src;
+		*dest = *src;
 		src++;
+		if (*src == '\0')
+		while (*dest == '*')
+		{
+		       *dest = '\0';
+		       dest++;
+	       	}
 		dest++;
 	}
 	return (cp);
