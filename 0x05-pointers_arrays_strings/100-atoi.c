@@ -9,14 +9,14 @@
  */
 int _atoi(char *s)
 {
-	int  sign = 0;
-	int  res = 0;
+	int  sign = 1;
+	unsigned int res = 0;
 
 	while (*s != '\0')
 	{
 		if (*s == '-')
 		{
-			sign++;
+			sign = sign * -1;
 		}
 		else if (*s >= '0' && *s <= '9')
 		{
@@ -28,9 +28,5 @@ int _atoi(char *s)
 		}
 		s++;
 	}
-	if (sign % 2 != 0 || sign == 1)
-	{
-		res = res * (-1);
-	}
-	return (res);
+	return (res * sign);
 }
