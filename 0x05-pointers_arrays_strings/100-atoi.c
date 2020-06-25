@@ -2,13 +2,15 @@
 
 /**
  * _atoi - function that convert a string to an integer.
- * @s: the string to convert
+ * @s: the string to convert.
  *
- * Return: the integer to print
+ * Return: the integer to print.
+ *
  */
 int _atoi(char *s)
 {
-	int  sign = 0, res = 0;
+	int  sign = 0;
+	int  res = 0;
 
 	while (*s != '\0')
 	{
@@ -26,7 +28,7 @@ int _atoi(char *s)
 		}
 		s++;
 	}
-	if (sign % 2 != 0)
+	if (sign % 2 != 0 || sign == 1)
 	{
 		res = res * (-1);
 	}
