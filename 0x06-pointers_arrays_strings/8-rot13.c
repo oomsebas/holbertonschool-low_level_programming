@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * - function that encodes a string into 1337.
+ *rot13 - function that encodes a string into 1337.
  *@s: the string to encode
  *
  *Return: pointer to the encoded array
