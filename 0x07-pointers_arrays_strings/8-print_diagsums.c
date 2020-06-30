@@ -6,7 +6,7 @@
  * matrix of integers.
  * @a: a  matrix containing integers
  * @size: the length of matrix
- * 
+ *
  * Return: Nothing.
  */
 void print_diagsums(int *a, int size)
