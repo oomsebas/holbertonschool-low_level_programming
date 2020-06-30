@@ -18,10 +18,11 @@ char *_strstr(char *haystack, char *needle)
 			haystack++;
 			if (*needle == *haystack)
 			{
-
 				cont+=1;
 				break;
 			}
+
+
 		}
 		needle++;
 	}
