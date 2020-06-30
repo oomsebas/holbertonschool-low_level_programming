@@ -9,7 +9,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int cont = 1;
+	int cont = 0;
 
 	while (*needle != '\0')
 	{
@@ -22,12 +22,11 @@ char *_strstr(char *haystack, char *needle)
 				cont+=1;
 				break;
 			}
-
 		}
 		needle++;
 	}
 
-	return ((haystack-cont);
+	return (haystack-cont+1);
 
 
 }
