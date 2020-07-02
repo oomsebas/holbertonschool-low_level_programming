@@ -43,13 +43,13 @@ int binary_search(int start, int end, int n)
 	{
 		if ((mid * mid) <= n)
 		{
-			mid = binary_search(mid + 1, end, n);
+			return binary_search(mid + 1, end, n);
 		}
 		else
 		{
-			mid = binary_search(start, mid - 1, n);
+			return  binary_search(start, mid - 1, n);
 		}
 	}
-	return (mid);
+	return (start);
 
 }
