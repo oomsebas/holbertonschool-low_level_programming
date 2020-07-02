@@ -8,8 +8,8 @@
  */
 int _sqrt_recursion(int n)
 {
-
 	int res;
+
 	if (n < 0)
 		return (-1);
 
@@ -17,17 +17,26 @@ int _sqrt_recursion(int n)
 	return (res);
 }
 
+/**
+ *binary_search - function that returns the natural square root of a number.
+ *@start: the init of the interval
+ *@end: the end of the interval
+ *@n: the number for the root
+ *
+ *Return: None
+ */
+
 int binary_search(int start, int end, int n)
 {
 	int mid;
 
 	mid = (start + end) / 2;
-	if (((mid * mid) <= n) && (((mid+1) * (mid +1)) > n))
+	if (((mid * mid) <= n) && (((mid + 1) * (mid + 1)) > n))
 	{
-		if (mid * mid == n)
+		if ((mid * mid) == n)
 			return (mid);
 		else
-			return(-1);
+			return (-1);
 	}
 	else
 	{
