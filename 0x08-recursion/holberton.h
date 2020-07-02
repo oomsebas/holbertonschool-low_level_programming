@@ -17,5 +17,7 @@ int _sqrt_recursion(int n);
 int binary_search(int start, int end, int n);
 int is_prime_number(int n);
 int check_factor(int n, int fact);
+int is_palindrome(char *s);
+int _strcmp_recursion(char *s, int n, int length);
 
 #endif /* _SAMPLE_HEADER_H_ */
