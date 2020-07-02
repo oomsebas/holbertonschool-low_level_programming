@@ -20,36 +20,19 @@ int _sqrt_recursion(int n)
 
 /**
  *binary_search - function that returns the natural square root of a number.
- *@start: the init of the interval
- *@end: the end of the interval
+ *@res: the end of the interval
  *@n: the number for the root
  *
  *Return: None
  */
 
-int binary_search(int start, int end, int n)
+int binary_search(int n, int root)
 {
-	int mid;
+	if (root * root == n)
+		return (root);
+	if (root * root > n)
+		return (-1);
 
-	mid = (start + end) / 2;
-	if (((mid * mid) <= n) && (((mid + 1) * (mid + 1)) > n))
-	{
-		if ((mid * mid) == n)
-			return (mid);
-		else
-			return (-1);
-	}
-	else
-	{
-		if ((mid * mid) <= n)
-		{
-			return (binary_search(mid + 1, end, n));
-		}
-		else
-		{
-			return  (binary_search(start, mid - 1, n));
-		}
-	}
-	return (start);
+	return (binary_search(n, root + 1));
 
 }
