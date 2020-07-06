@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int i, sum = 0;
 
-        if (argc <= 1)
+	if (argc <= 1)
 	{
 		printf("%d\n", 0);
 		return (1);
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		if (_isdigit(argv[i]))
 		{
 			printf("%s\n", "Error");
-			return(1);
+			return (1);
 		}
 		sum = sum + _atoi(argv[i]);
 	}
