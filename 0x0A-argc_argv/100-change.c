@@ -21,14 +21,14 @@ int main(int argc, char **argv)
 	}
 
 	total = _atoi(argv[1]);
+	if (total < 0)
+       	{
+       		printf("%d\n", 0);
+       		return (0);
+       	}
+
 	for (i = 0; i < 5; i++)
 	{
-		if (total <= 0)
-		{
-			printf("%d\n", 0);
-			return (0);
-		}
-
 		div = total / cents[i];
 		cont += div;
 		total = total - (div * (cents[i]));
