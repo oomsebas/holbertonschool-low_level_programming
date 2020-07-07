@@ -7,4 +7,6 @@
  * Function prototypes
  */
 char *create_array(unsigned int size, char c);
+char *_strdup(char *str);
+int _strlen(char *s);
 #endif /* _SAMPLE_HEADER_H_ */
