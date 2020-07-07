@@ -11,10 +11,10 @@
 int main(int argc, char **argv)
 {
 	int cents[] = {25, 10, 5, 2, 1};
-	int  total, div, cont=0;
+	int  total, div, cont = 0;
 	int i;
 
-	if ( argc != 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
@@ -23,9 +23,9 @@ int main(int argc, char **argv)
 	total = _atoi(argv[1]);
 	for (i = 0; i < 5; i++)
 	{
-		if (total < 0)
+		if (total <= 0)
 		{
-			printf("%d", 0);
+			printf("%d\n", 0);
 			return (0);
 		}
 
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 		cont += div;
 		total = total - (div * (cents[i]));
 	}
-	printf ("%d\n",cont);
+	printf("%d\n", cont);
 	return (0);
 }
 
