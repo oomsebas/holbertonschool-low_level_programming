@@ -3,8 +3,8 @@
 #include "holberton.h"
 
 /**
- *_strdup - function that returns a pointer to a newly allocated space in memory
- *, which contains a copy of the string given as a parameter.
+ *_strdup - function that returns a pointer to a newly allocated space in
+ *memory, which contains a copy of the string given as a parameter.
  *@str: Pointer indicating the string to copy.
  *Return: pointer indicating the new adress of the copied string.
  */
@@ -13,13 +13,13 @@ char *_strdup(char *str)
 	int i;
 	char *p, size;
 
-	if (str == NULL)
+	size = _strlen(str);
+	if (str == NULL || size == 0)
 	{
 		return (NULL);
 	}
 
-	size = _strlen(str);
-	p = malloc(size * sizeof(str));
+	p = malloc(size * sizeof(*str));
 
 	if (p == NULL)
 	{
