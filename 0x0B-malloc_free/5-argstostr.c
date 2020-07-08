@@ -18,9 +18,10 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 		sum += _strlen(*(av + i));
-	p = malloc((sum * sizeof(char)) + ac - 1);
+	p = malloc((sum * sizeof(char)) + ac);
 	if (p == NULL)
 	{
+		free(p);
 		return (NULL);
 	}
 	s = p;
