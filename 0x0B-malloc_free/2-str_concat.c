@@ -27,12 +27,17 @@ char *str_concat(char *s1, char *s2)
 		p++;
 		s1++;
 	}
-	while ((size2--) + 1)
+	if (size2 == 0)
+	{
+		*p = '\0';
+	}
+	while (size2--)
 	{
 		*p = *s2;
 		p++;
 		s2++;
 	}
+	*p = '\0';
 	return (c);
 }
 
@@ -45,6 +50,11 @@ char *str_concat(char *s1, char *s2)
 int _strlen(char *s)
 {
 	int len = 0;
+
+	if ( s == NULL)
+	{
+		return (0);
+	}
 
 	while (*s)
 	{
