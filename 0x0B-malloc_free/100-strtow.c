@@ -12,7 +12,14 @@ char **strtow(char *str)
 {
 	char **q;
 
+	if(str == NULL || *str == '\0' )
+	{
+		return (NULL);
+	}
+
 	q  = countwords(str);
+	if (q == NULL)
+		return (NULL);
 	q = countletters(str, q);
 	fillarr(q, str);
 	return (q);
@@ -41,6 +48,10 @@ char **countwords(char *s)
 			p++;
 		}
 		countwords += 1;
+	}
+	if (countwords == 0)
+	{
+		return (0);
 	}
 	q = malloc((countwords + 1) * sizeof(char *));
 
