@@ -14,7 +14,7 @@ char **strtow(char *str)
 
 	q  = countwords(str);
 	q = countletters(str, q);
-	llenararr(q, str);
+	fillarr(q, str);
 	return (q);
 }
 
