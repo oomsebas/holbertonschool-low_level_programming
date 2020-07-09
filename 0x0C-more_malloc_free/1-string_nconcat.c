@@ -11,16 +11,25 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-
+	unsigned int size1;
 	char *p;
 
-	if (n >= (_strlen(s2)+1))
+	if (s1 == NULL)
+		s1 = "\0";
+	if (s2 == NULL)
+		s2 = "\0";
+
+	if (n >= (_strlen(s2) + 1))
 	{
 		n  = _strlen(s2);
 	}
 
-	p = malloc((_strlen(s1) + n) + 2);
-	p = _strcpy(p,s1);
+	size1 = strlen(s1);
+	p = malloc((size1 + n) + 2);
+	if (p == NULL)
+		return (NULL);
+
+	p = _strcpy(p, s1);
 	p = _strncat(p, s2, n);
 
 	return (p);
@@ -97,3 +106,5 @@ unsigned int _strlen(char *s)
 
 	return (len);
 }
+
+
