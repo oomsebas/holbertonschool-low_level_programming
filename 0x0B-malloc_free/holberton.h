@@ -14,4 +14,8 @@ int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
 char *copystr(char *dest, char *source);
+char **strtow(char *str);
+char **countwords(char *s);
+void fillarr(char **s1, char *s);
+char **countletters(char *s, char **q);
 #endif /* _SAMPLE_HEADER_H_ */
