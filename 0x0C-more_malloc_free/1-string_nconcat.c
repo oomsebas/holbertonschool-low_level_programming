@@ -14,12 +14,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int size1;
 	char *p;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	if (n >= (_strlen(s2) + 1))
 	{
 		n = _strlen(s2);
 	}
 
-	size1 = strlen(s1);
+	size1 = _strlen(s1);
 	p = malloc((size1 + n) + 2);
 	if (p == NULL)
 		return (NULL);
@@ -101,5 +106,3 @@ unsigned int _strlen(char *s)
 
 	return (len);
 }
-
-
