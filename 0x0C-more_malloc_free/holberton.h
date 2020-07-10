@@ -22,4 +22,6 @@ unsigned int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
 void *_calloc(unsigned int nmemb, unsigned int size);
+int *array_range(int min, int max);
+int _abs(int c);
 #endif /* _SAMPLE_HEADER_H_ */
