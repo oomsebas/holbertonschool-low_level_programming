@@ -26,7 +26,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 
 	for (i = 0; i < nmemb; i++)
+	{
 		*(p + i) = 0;
+	      
+	}
 
-	return (p);
+	return ((void *)p);
 }
