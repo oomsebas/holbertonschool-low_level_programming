@@ -15,7 +15,7 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 
-	range = _abs(max-min);
+	range = max - min;
 	p = malloc(sizeof(int) * range + 1);
 	if (p == NULL)
 		return (NULL);
@@ -27,27 +27,4 @@ int *array_range(int min, int max)
 	}
 	return (p);
 
-}
-
-/**
- *_abs - computes the absolute value of a number
- *@c: the number to compute the absolute value
- *
- *Return: the absolute value of the number
- */
-int _abs(int c)
-{
-	if (c > 0)
-	{
-		return (c);
-	}
-	else if (c == 0)
-	{
-		return (0);
-	}
-	else
-	{
-		c = (-1) * c;
-		return (c);
-	}
 }
