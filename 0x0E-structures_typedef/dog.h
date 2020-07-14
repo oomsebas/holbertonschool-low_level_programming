@@ -9,7 +9,7 @@
  *Description: this struct contains all the variables related
  *to the dog characteristics
  */
-struct dog
+struct dog_t
 {
 	char *name;
 	float age;
