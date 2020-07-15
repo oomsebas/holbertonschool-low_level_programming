@@ -9,9 +9,13 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if(name == NULL)
+	if(!f)
+	{
+		return;
+	}
+	if (name == NULL)
 	{
 		name = "(nil)";
 	}
-		f(name);
+	f(name);
 }
