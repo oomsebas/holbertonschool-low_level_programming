@@ -23,7 +23,7 @@ void print_all(const char * const format, ...)
 	va_start(ap, format);
 	while (format && format[i])
 	{
-		j = 0
+		j = 0;
 		while (j <= 3)
 		{
 			if (ops[j].op[0] == format[i])
