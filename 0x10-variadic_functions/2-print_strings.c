@@ -4,9 +4,9 @@
 
 /**
  *print_strings - functions that prints ... number of strings
- *@separator:
- *@n:
- *@...:
+ *@separator: char with the separator to use
+ *@n: the number of members
+ *@...: the arguments to print
  *Return: None.
  */
 void print_strings(const char *separator, const unsigned int n, ...)
