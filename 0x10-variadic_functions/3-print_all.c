@@ -34,7 +34,7 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		i++;
-		if (i <= (n -1))
+		if (i <= (n - 1))
 		printf(", ");
 	}
 	printf("\n");
@@ -80,7 +80,7 @@ void prints(va_list ap)
 {
 	char *p = va_arg(ap, char*);
 
-	printf("%s", (p == NULL) ? "(nil)" : p);
+	printf("%s", p);
 }
 
 
