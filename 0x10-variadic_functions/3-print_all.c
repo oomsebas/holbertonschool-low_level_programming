@@ -66,7 +66,7 @@ void printi(va_list ap)
  */
 void printfl(va_list ap)
 {
-	printf("%2f", va_arg(ap, double));
+	printf("%.2f", va_arg(ap, double));
 }
 
 /**
@@ -76,5 +76,9 @@ void printfl(va_list ap)
  */
 void prints(va_list ap)
 {
-	printf("%s", va_arg(ap, char*));
+	char *p = va_arg(ap, char*);
+	if (p == NULL)
+		printf("(nil)");
+	else
+		printf("%s", va_arg(ap, char*));
 }
