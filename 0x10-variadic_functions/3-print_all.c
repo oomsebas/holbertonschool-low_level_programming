@@ -78,7 +78,10 @@ void prints(va_list ap)
 {
 	char *p = va_arg(ap, char*);
 	if (p == NULL)
+	{
 		printf("(nil)");
-	else
+		return;
+	}
+
 		printf("%s", va_arg(ap, char*));
 }
