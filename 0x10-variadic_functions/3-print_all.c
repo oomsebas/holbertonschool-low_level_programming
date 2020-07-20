@@ -11,7 +11,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0, n;
+	int i = 0, j = 0;
 	va_list ap;
 	op_ ops[] = {
 		{"c", printc},
@@ -21,9 +21,11 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(ap, format);
-	n = _strlen(format);
+/*	n = _strlen(format);*/
 	while (format[i])
 	{
+		if( i != 0)
+			printf(", ");
 		j = 0;
 		while (j <= 3)
 		{
@@ -34,8 +36,7 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		i++;
-		if (i <= (n - 1))
-		printf(", ");
+
 	}
 	printf("\n");
 	va_end(ap);
