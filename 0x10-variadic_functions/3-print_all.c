@@ -11,7 +11,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0;
+	int i = 0, j = 0, n;
 	va_list ap;
 	op_ ops[] = {
 		{"c", printc},
@@ -21,6 +21,7 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(ap, format);
+	n = _strlen(format);
 	while (format[i])
 	{
 		j = 0;
@@ -33,6 +34,8 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		i++;
+		if (i <= (n -1))
+		printf(", ");
 	}
 	printf("\n");
 	va_end(ap);
@@ -65,7 +68,7 @@ void printi(va_list ap)
  */
 void printfl(va_list ap)
 {
-	printf("%.2f", va_arg(ap, double));
+	printf("%f", va_arg(ap, double));
 }
 
 /**
@@ -84,4 +87,24 @@ void prints(va_list ap)
 	}
 
 		printf("%s", p);
+}
+
+
+/**
+ *_strlen - function that returns the length of a string.
+ *@s: string to measute its length.
+ *
+ *Return: int with the length of n.
+ */
+int _strlen(const char *s)
+{
+	int len = 0;
+
+	while (*s)
+	{
+		len += 1;
+		s = s + 1;
+	}
+
+	return (len);
 }
