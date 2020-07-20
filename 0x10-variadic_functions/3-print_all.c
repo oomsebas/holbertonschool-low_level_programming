@@ -77,11 +77,12 @@ void printfl(va_list ap)
 void prints(va_list ap)
 {
 	char *p = va_arg(ap, char*);
+
 	if (p == NULL)
 	{
 		printf("(nil)");
 		return;
 	}
 
-		printf("%s", va_arg(ap, char*));
+		printf("%s", p);
 }
