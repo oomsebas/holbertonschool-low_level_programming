@@ -24,14 +24,13 @@ void print_all(const char * const format, ...)
 /*	n = _strlen(format);*/
 	while (format[i])
 	{
-		if( i != 0)
-			printf(", ");
 		j = 0;
 		while (j <= 3)
 		{
 			if (ops[j].op[0] == format[i])
 			{
 				(*ops[j].f)(ap);
+				printf(", ");
 			}
 			j++;
 		}
@@ -80,6 +79,10 @@ void printfl(va_list ap)
 void prints(va_list ap)
 {
 	char *p = va_arg(ap, char*);
-
+	if( p == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
 	printf("%s", p);
 }
