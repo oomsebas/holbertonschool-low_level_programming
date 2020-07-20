@@ -1,6 +1,6 @@
 #ifndef UNTITLED_VARIADIC_FUNCTIONS_H
 #define UNTITLED_VARIADIC_FUNCTIONS_H
-
+#include <stdarg.h>
 /**
 * struct arg - structure for print several types
 * @op: operation name
