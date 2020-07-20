@@ -80,13 +80,7 @@ void prints(va_list ap)
 {
 	char *p = va_arg(ap, char*);
 
-	if (p == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-
-		printf("%s", p);
+	printf("%s", (p == NULL) ? "(nil)" : p);
 }
 
 
