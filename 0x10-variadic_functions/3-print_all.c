@@ -25,7 +25,7 @@ void print_all(const char * const format, ...)
 	while (format[i])
 	{
 		j = 0;
-		while (format[j])
+		while ( j < 4)
 		{
 			if (ops[j].op[0] == format[i])
 			{
