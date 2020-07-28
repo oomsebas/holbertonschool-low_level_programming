@@ -14,12 +14,13 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	if (new == NULL)
 		return (NULL);
 
+	new->n = n;
 	if (*head == NULL)
 	{
 		*head = new;
 		return (new);
 	}
-	new->n = n;
+
 	join_tail(*head, new);
 
 	return (new);
