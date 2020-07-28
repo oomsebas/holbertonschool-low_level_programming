@@ -23,4 +23,5 @@ size_t listint_len(const listint_t *h);
 listint_t *add_nodeint(listint_t **head, const int n);
 void join_tail(listint_t *h, listint_t *new);
 listint_t *add_nodeint_end(listint_t **head, const int n);
+void free_listint(listint_t *head);
 #endif
