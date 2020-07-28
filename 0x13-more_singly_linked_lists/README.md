@@ -1,10 +1,10 @@
 ## MORE LINKED LIST PROJECT
 
-#Introduction
+# Introduction
 
 In this project the objectives are to handle lisked list with ease while coding  and to be able to explain clearly any concept related this theme to our peers.
 
-#Tasks
+# Tasks
 
 0. Print list mandatory
 Write a function that prints all the elements of a listint_t list.
