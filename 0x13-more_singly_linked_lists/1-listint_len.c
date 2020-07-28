@@ -1,7 +1,5 @@
 #include "lists.h"
 
-#define calc_len(obj) ((sizeof(obj)) / (sizeof(obj->n)))
-
 /**
  *listint_len - function that prints the number of nodes
  *@h: linked lists to be calculated the number of members
@@ -9,9 +7,13 @@
  */
 size_t listint_len(const listint_t *h)
 {
-	int i;
+	size_t i = 0;
 
-	i = calc_len(h);
+	if (h == NULL)
+		return (0);
+	i++;
+	h = h->next;
+	i += listint_len(h);
 
 	return (i);
 }
