@@ -30,7 +30,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		aux = aux->next;
 		if (aux == NULL)
-			retun(NULL);
+			return (NULL);
 	}
 	new->n = n;
 	aux1 = aux->next;
