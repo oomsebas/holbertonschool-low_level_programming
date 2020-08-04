@@ -21,11 +21,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buff = malloc(sizeof(char) * letters);
 	if (buff == NULL)
 	{
+		close(fd)
 		return (0);
 	}
 
-numchar = read(fd, buff, letters);
-write(STDOUT_FILENO, buff, numchar);
+	numchar = read(fd, buff, letters);
+	write(STDOUT_FILENO, buff, numchar);
+
+	close(fd);
+	free(buff);
 
 	return (numchar);
 }
