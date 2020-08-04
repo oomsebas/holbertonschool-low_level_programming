@@ -36,6 +36,9 @@ int create_file(const char *filename, char *text_content)
 		free(buff);
 		return (-1);
 	}
+
+	close(fd);
+	free(buff);
 	return (1);
 
 }
