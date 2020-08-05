@@ -23,12 +23,16 @@ int main(int argc, char **argv)
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
 	{
-		return (-1);
+		dprintf(STDERR_FILENO, "Can't read from file %s\n",argv[1]);
+		close(fd_from);
+		exit(98);
 	}
 	fd_to = open(argv[2], O_RDWR | O_CREAT | O_TRUNC | O_APPEND, 0664);
 	if (fd_to == -1)
 	{
-		return (-1);
+		dprintf(STDERR_FILENO, "Can't create file %s\n", argv[2]);
+		close(fd_to);
+		exit(99);
 	}
 
 	while(rd)
