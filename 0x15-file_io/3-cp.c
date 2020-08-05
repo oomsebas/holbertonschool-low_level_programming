@@ -3,11 +3,10 @@
 #define BUFFSIZE 1024
 
 /**
- *
- *
- *
- *
- *
+ *main - function that copies a source file to a dest file
+ *@argc: number of arguments
+ *@argv: arguments passed to the function
+ *Return: 0 if success, and 1 if fail
  */
 int main(int argc, char **argv)
 {
@@ -30,7 +29,7 @@ int main(int argc, char **argv)
 	fd_to = open(argv[2], O_RDWR | O_CREAT | O_TRUNC | O_APPEND, 0664);
 	if (fd_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't create file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Can't write to %s\n", argv[2]);
 		close(fd_to);
 		exit(99);
 	}
@@ -49,7 +48,7 @@ int main(int argc, char **argv)
 		wr = write(fd_to, buff, rd);
 		if (wr == -1)
 		{
-			dprintf(STDERR_FILENO, "Can't create file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Can't write to %s\n", argv[2]);
 			close(fd_to);
 			exit(99);
 		}
