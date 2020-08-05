@@ -12,7 +12,7 @@
 int main(int argc, char **argv)
 {
 	int fd_to, fd_from, wr;
-	size_t rd;
+	int rd;
 	char buff[1024];
 
 	if (argc != 3)
