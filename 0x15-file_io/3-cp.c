@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 		close(fd_from);
 		exit(98);
 	}
-	fd_to = open(argv[2], O_RDWR | O_CREAT | O_TRUNC | O_APPEND, 0664);
+	fd_to = open(argv[2],  O_CREAT | O_TRUNC | O_APPEND, 0664);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
