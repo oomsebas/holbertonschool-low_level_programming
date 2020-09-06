@@ -3,7 +3,7 @@
 /**
  * dlistint_len - print the lenght od a double linked list
  * @h: the double link list to be measured
- * return: the number of nodes of the double link list
+ * Return: the number of nodes of the double link list
  */
 
 size_t dlistint_len(const dlistint_t *h)
