@@ -19,7 +19,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	number = n;
 	if (*head == NULL)
 	{
-		new = add_dnodeint(head, number);
+		new = add_dnodeint_end(head, number);
 		return (new);
 	}
 	current = *head;
