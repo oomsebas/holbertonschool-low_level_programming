@@ -17,15 +17,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	head = h;
 	number = n;
-	if (head == NULL)
-		return (NULL);
+
 	if (*head == NULL)
 	{
 		new = add_dnodeint(head, number);
 		return (new);
 	}
 	current = *head;
-	if ((idx == 0) | (idx > 2147483647))
+	if (idx == 0)
 	{
 		add_dnodeint(head, number);
 		return (*head);
@@ -51,5 +50,4 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		add_dnodeint_end(head, number);
 		return (new);
 	}
-	return (NULL);
 }
