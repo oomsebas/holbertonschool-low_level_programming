@@ -1,11 +1,10 @@
 #include "lists.h"
 
 /**
- *insert_dnodeint_at_index - insert a node on a0 list
- *@h: pointer to the head of the list
- *@idx: index to insert the node
- *@n: number to the node to insert.
- *Return: pointer to the head of the created list
+ *delete_dnodeint_at_index - insert a node on a0 list
+ *@head: pointer to the head of the list
+ *@index: number to the node to delete.
+ *Return: 1 for success, -1 for failure.
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
