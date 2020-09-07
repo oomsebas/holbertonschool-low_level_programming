@@ -25,7 +25,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	current = *head;
 
-	if (idx == 0)
+	if ((idx == 0) | (idx > 2147483647))
 	{
 		add_dnodeint(head, number);
 		return (*head);
