@@ -15,7 +15,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if ((key == NULL) | (*key == '\0'))
 		return (0);
+
 	key_num = key_index((unsigned char *)key, (unsigned long int)ht->size);
+	if (key_num > ht->size)
+		return (0);
 	entry = ht->array[key_num];
 	tmp = ht->array[key_num];
 
@@ -25,6 +28,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[key_num]->key = strdup(key);
 		ht->array[key_num]->value = strdup(value);
 		ht->array[key_num]->next = NULL;
+		printf("%s %s\n", ht->array[key_num]->key, ht->array[key_num]->value);
 		return (1);
 	}
 	else
@@ -35,6 +39,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			{
 				tmp1 = tmp->value;
 				tmp->value = strdup(value);
+				printf("%s %s\n", ht->array[key_num]->key, ht->array[key_num]->value);
 				free(tmp1);
 				return (1);
 			}
@@ -45,6 +50,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new->value = strdup(value);
 		new->next = ht->array[key_num];
 		ht->array[key_num] = new;
+		printf("%s %s\n", ht->array[key_num]->key, ht->array[key_num]->value);
 		return (1);
 	}
 	return (0);
