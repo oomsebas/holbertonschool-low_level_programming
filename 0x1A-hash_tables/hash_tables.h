@@ -34,6 +34,19 @@ typedef struct hash_table_s
 	hash_node_t **array;
 } hash_table_t;
 
+/**
+ *struct print - print structure
+ *@value: value to print
+ *@key: key to print
+ */
+typedef	struct print
+{
+	char *value;
+	char *key;
+}printr;
+
+
+
 hash_table_t *hash_table_create(unsigned long int size);
 hash_node_t *add_nodeint(hash_node_t  **head);
 unsigned long int hash_djb2(const unsigned char *str);
@@ -42,4 +55,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
+hash_node_t *add_node(hash_node_t **head, const char *key, const char *value);
 #endif
