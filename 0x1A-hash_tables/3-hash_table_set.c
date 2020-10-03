@@ -16,19 +16,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	if (!ht || !(ht->array) || ht->size == 0)
 		return (0);
-	key_num = key_index((unsigned char *)key, (unsigned long int)ht->size);
+	key_num = key_index((const unsigned char *)key, (unsigned long int)ht->size);
 	tmp = ht->array[key_num];
-	if (ht->array[key_num] != NULL)
+	if (ht->array[key_num] != 0)
 	{
-		if (strcmp(tmp->key, key) == 0)
+		if (strcmp(ht->array[key_num]->key, key) == 0)
 		{
-			free(tmp->value);
-			tmp->value = strdup(value);
+			free(ht->array[key_num]->value);
+			ht->array[key_num]->value = strdup(value);
 			return (1);
 		}
 		else
 		{
-			add_node(&(ht->array[key_num]),key, value);
+			add_node(&(ht->array[key_num]), key, value);
 		}
 
 	}
@@ -36,8 +36,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		add_node(&(ht->array[key_num]), key, value);
 	}
-
-	return(1);
+	return (1);
 
 }
 
@@ -56,10 +55,10 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 	if (new_node == NULL)
 		return (NULL);
 	new_node->key = strdup(key);
-        if (new_node->key == NULL)
+	if (new_node->key == NULL)
 		free(new_node->key);
 	new_node->value = strdup(value);
-        if (new_node->value == NULL)
+	if (new_node->value == NULL)
 		free(new_node->value);
 	new_node->next = *head;
 	*head = new_node;
