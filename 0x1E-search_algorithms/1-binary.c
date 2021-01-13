@@ -19,13 +19,15 @@ int binary_search(int *array, size_t size, int value)
 	for (i = 0; i < size; i++)
 	{
 		print_array(low, high, array);
-		if (low == high)
-			return (low);
 		mid = (low +  high) / 2;
 		if (value < array[mid])
 			high = mid - 1;
 		else if (value == array[mid])
 			return (mid);
+		else if (low == high && value == array[mid])
+			return (low);
+		else if (low == high && value != array[mid])
+			return (-1);
 		else if (value > array[mid])
 			low = mid + 1;
 	}
