@@ -14,7 +14,7 @@ int jump_search(int *array, size_t size, int value)
 	size_t  block, jump = 0;
 	int step;
 
-	if (array == NULL || value < array[0])
+	if (array == NULL || value < array[0] || value < 0))
 		return (-1);
 	block = sqrt(size);
 	if (array[0] == value)
