@@ -47,11 +47,14 @@ int leftmost_search(int *array, int low, int high, int value)
 	else
 	{
 		if (low == high && array[low] == value)
+		{
 			return (low);
+		}
 		else
+		{
 			print_array(low, high, array);
 			return (-1);
-
+		}
 	}
 }
 
